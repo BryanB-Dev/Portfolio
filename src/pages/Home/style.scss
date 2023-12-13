@@ -1,7 +1,8 @@
 @import '../../styles/main.scss';
 
 .homeSection {
-    @include flex(row, space-between);
+    @include flex(row, space-between, center);
+    padding: 0px 50px;
 
     &__text {
         @include flex(column, flex-start, stretch, 50px);
