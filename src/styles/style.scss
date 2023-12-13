@@ -17,7 +17,10 @@ body {
     }
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: linear-gradient(to left, rgb(27, 20, 41), rgb(20, 15, 35));
+    background-color: rgba(12,10,22,.863);
+    background-image: linear-gradient(to bottom,hsla(0,3%,6%,.678),rgba(12,10,22,.863)),url(../assets/home-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .wrapper {
