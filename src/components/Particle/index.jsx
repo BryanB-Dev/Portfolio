@@ -33,13 +33,13 @@ export default function Particle() {
                         area: 1080
                       },
                       limit: 0,
-                      value: 400
+                      value: 200
                     },
                     opacity: {
                       animation: {
                         enable: true,
                         minimumValue: 0.05,
-                        speed: 0.25,
+                        speed: 1,
                         sync: false
                       },
                       random: {

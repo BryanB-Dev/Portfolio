@@ -7,10 +7,12 @@
     box-sizing: border-box;
     font-family: 'Raleway', serif;
     font-style: normal;
+    position: relative;
+    z-index: 10;
 }
 
 body {
-    padding-top: 40px;
+    min-height: 2800px;
     margin: 0 auto;
     @media screen and (max-width: $breakpoint-mobile){
         padding-top: 20px;

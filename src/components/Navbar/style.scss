@@ -1,0 +1,57 @@
+@import '../../styles/main.scss';
+
+.nav {
+    @include flex(row, flex-end, center, 50px);
+
+    &__item {
+        height: auto;
+        text-decoration: none;
+        @include flex(column, flex-end, center, 5px);
+
+        &--fork {
+            padding: 7px 17px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: .25rem;
+            border: 1px solid transparent;
+            border-color: #623686 !important;
+            background-color: #934cce5e !important;
+
+            &::after {
+                display: none !important;
+            }
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &::after {
+            background: $color-primary;
+            border-radius: 16px;
+            bottom: 1px;
+            content: "";
+            display: block;
+            height: 5px;
+            left: 0;
+            top: 25px;
+            position: absolute;
+            transition: all .3s ease-out 0s;
+            width: 0;
+        }
+    }
+
+    &__link {
+        font-size: 1.2em;
+        font-weight: 400;
+        color: $color-tertiary;
+        text-decoration: none;
+        @include flex(row, center, center, 5px);
+
+        >svg {
+            width: 1em;
+        }
+    }
+}

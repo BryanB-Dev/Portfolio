@@ -1,12 +1,14 @@
 import React from 'react';
-// import Header from './Header';
+import Header from '../Header';
+import Particle from '../Particle';
 // import Footer from './Footer';
 
 export default function Layout({ children }) {
     return (
         <>
             <div className="wrapper">
-                {/* <Header /> */}
+                <Particle />
+                <Header />
                 {children}
             </div>
             {/* <Footer /> */}

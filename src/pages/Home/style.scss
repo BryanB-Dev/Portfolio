@@ -2,7 +2,7 @@
 
 .homeSection {
     @include flex(row, space-between, center);
-    padding: 0px 50px;
+    padding: 100px 50px 30px 50px;
 
     &__text {
         @include flex(column, flex-start, stretch, 50px);
