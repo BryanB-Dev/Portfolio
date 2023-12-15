@@ -1,1 +1,29 @@
 @import '../../styles/main.scss';
+
+.header {
+    @include flex(row, center);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 18px 0px;
+    z-index: 1024;
+    transition: all .3s ease-out 0s;
+    
+    &--blur {
+        backdrop-filter: blur(15px);
+        background-color: #1b1a2ea9;
+        box-shadow: 0 10px 10px 0 rgba(9, 5, 29, .171);
+    }
+
+    &__content {
+        @include flex(row, space-between, center);
+        width: 100%;
+        max-width: 1320px;
+
+        &__logo {
+            @include flex(row, center, center);
+        }
+    }
+
+}
