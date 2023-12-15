@@ -5,4 +5,10 @@
     font-size: 2.2em;
     font-weight: 600;
     text-align: left;
+
+    @media screen and (max-width: $breakpoint-mobile){
+        height: 56px;
+        font-size: 1.4em;
+        font-weight: 500;
+    }
 }

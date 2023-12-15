@@ -2,7 +2,11 @@
 
 .homeSection {
     @include flex(row, space-between, center);
-    padding: 100px 50px 30px 50px;
+    padding: 180px 50px 30px 50px;
+    @media screen and (max-width: $breakpoint-mobile){
+        @include flex(column, flex-start, center, 20px);
+        padding: 180px 10px 30px 10px;
+    }
 
     &__text {
         @include flex(column, flex-start, stretch, 50px);
