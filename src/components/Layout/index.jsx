@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import Particle from '../Particle';
-// import Footer from './Footer';
+import Footer from '../Footer';
 
 export default function Layout({ children }) {
     return (
@@ -11,7 +11,7 @@ export default function Layout({ children }) {
                 <Header />
                 {children}
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 };

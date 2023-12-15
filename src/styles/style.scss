@@ -12,7 +12,6 @@
 }
 
 body {
-    min-height: 2800px;
     margin: 0 auto;
     @media screen and (max-width: $breakpoint-mobile){
         padding-top: 20px;
@@ -26,6 +25,7 @@ body {
 }
 
 .wrapper {
+    min-height: calc(100vh - 70px);
     max-width: 1320px;
     margin: 0 auto;
 

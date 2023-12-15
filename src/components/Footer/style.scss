@@ -1,0 +1,25 @@
+@import '../../styles/main.scss';
+
+.footer {
+    @include flex(row, center, center);
+    width: 100%;
+    bottom: 0;
+    padding: 25px 0px;
+    z-index: 1024;
+    background-color: #0a0416;
+    color: $color-tertiary;
+    
+    &__content {
+        @include flex(row, space-between, center);
+        width: 100%;
+        max-width: 1320px;
+    }
+    
+    &__item {
+        @include flex(row, center, center, 7px);
+        &>a {
+            color: $color-primary;
+            text-decoration: none;
+        }
+    }
+}
