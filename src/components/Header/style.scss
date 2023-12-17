@@ -20,6 +20,7 @@
         @include flex(row, space-between, center);
         width: 100%;
         max-width: 1320px;
+        margin: 0 30px;
 
         &__logo {
             @include flex(row, center, center);
