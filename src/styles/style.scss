@@ -12,7 +12,6 @@
 }
 
 body {
-    margin: 0 30px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: rgba(12,10,22,.863);
@@ -26,8 +25,9 @@ body {
 
 .wrapper {
     min-height: calc(100vh - 70px);
-    max-width: 1320px;
+    max-width: calc(1320px - 60px);
     margin: 0 auto;
+    padding: 0 30px;
 
     @media screen and (max-width: $breakpoint-mobile){
         padding: 0px 20px;
