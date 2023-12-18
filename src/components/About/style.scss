@@ -1,0 +1,36 @@
+@import '../../styles/main.scss';
+
+.aboutSection {
+    @include flex(row, space-between, flex-end, 80px);
+    padding: 180px 0px 50px 0px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        @include flex(column, flex-start, center, 100px);
+        padding: 180px 10px 30px 10px;
+    }
+
+    &__text {
+        @include flex(column, flex-start, stretch, 50px);
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: 100%;
+            padding: 0px 20px;
+        }
+
+        >h2 {
+            text-align: center;
+        }
+    }
+    
+    &__description {
+        @include flex(column, flex-start, stretch, 50px);
+        p:nth-child(2){
+            padding-left: 70px;
+        }
+    }
+
+    &__img {
+        max-width: 500px;
+        width: 100%;
+    }
+}
