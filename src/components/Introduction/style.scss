@@ -1,10 +1,26 @@
 @import '../../styles/main.scss';
 
-.introduction {
-    color: $color-tertiary;
-    @include flex(column, flex-start, center, 60px);
-    width: 75%;
+
+.introductionSection {
+    @include flex(row, space-between, center, 80px);
+    padding: 150px 0px;
+
     @media screen and (max-width: $breakpoint-mobile) {
+        @include flex(column, flex-start, center, 100px);
+        padding: 100px 0px;
+    }
+
+    &__text {
+        @include flex(column, flex-start, center, 60px);
+        width: 75%;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: 100%;
+        }
+    }
+
+    .avatar {
+        max-width: 230px;
         width: 100%;
     }
 }
