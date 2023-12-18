@@ -15,6 +15,11 @@
             padding: 0px 20px;
         }
     }
+
+    &__title {
+        @include flex(column, flex-start, stretch, 20px);
+        width: 100%;
+    }
 }
 
 .introductionSection {

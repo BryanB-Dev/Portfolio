@@ -2,17 +2,12 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import "./style.scss";
 
-export default function Type() {
+export default function Type( {text} ) {
     return (
         <div className="type">
             <Typewriter
                 options={{
-                    strings: [
-                        "Software Developer",
-                        "Freelancer",
-                        "MERN Stack Developer",
-                        "Open Source Contributor",
-                    ],
+                    strings: text,
                     autoStart: true,
                     loop: true,
                     deleteSpeed: 50,
