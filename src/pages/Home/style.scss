@@ -1,27 +1,5 @@
 @import '../../styles/main.scss';
 
-.homeSection {
-    @include flex(row, space-between, center);
-    padding: 180px 50px 50px 50px;
-    @media screen and (max-width: $breakpoint-mobile){
-        @include flex(column, flex-start, center, 20px);
-        padding: 180px 10px 30px 10px;
-    }
-
-    &__text {
-        @include flex(column, flex-start, stretch, 50px);
-        @media screen and (max-width: $breakpoint-mobile){
-            width: 100%;
-            padding: 0px 20px;
-        }
-    }
-
-    &__title {
-        @include flex(column, flex-start, stretch, 20px);
-        width: 100%;
-    }
-}
-
 .introductionSection {
     @include flex(row, space-between, center, 80px);
     padding: 150px 0px;
