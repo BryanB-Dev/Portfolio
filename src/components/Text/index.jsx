@@ -1,6 +1,6 @@
 import "./style.scss";
 
-export default function Text({ text, size = 1.2 }) {
+export default function Text({ text, size = 1.2, extra = false }) {
     let formattedContent = text;
     if (!Array.isArray(text)) {
         formattedContent = [text];
@@ -18,15 +18,14 @@ export default function Text({ text, size = 1.2 }) {
                 return part;
             }
         });
-
         // Ajout de <br/> après chaque ligne sauf la dernière
         const isLastLine = lineIndex === formattedContent.length - 1;
-        return isLastLine ? <p className="text" style={{ fontSize: `${size}em` }} key={lineIndex}>{content}</p> : <p className="text" style={{ fontSize: `${size}em` }} key={lineIndex}>{content}<br /></p>;
+        return isLastLine ? <p className="text" style={{ fontSize: `${size}em` }} key={lineIndex}>{content}{extra && extra}</p> : <p className="text" style={{ fontSize: `${size}em` }} key={lineIndex}>{content}<br /></p>;
     });
 
     return (
-    <>
-        {formattedContent}
-    </>
+        <>
+            {formattedContent}
+        </>
     );
 }
