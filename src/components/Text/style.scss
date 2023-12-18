@@ -1,0 +1,10 @@
+@import '../../styles/main.scss';
+
+.text {
+    color: $color-tertiary;
+    line-height: 1.5;
+    
+    >.primaryColor {
+        color: $color-primary
+    }
+}

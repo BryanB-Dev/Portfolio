@@ -1,9 +1,10 @@
+import Title from "../Title";
 import "./style.scss";
 
 export default function Introduction() {
     return (
         <div className="introduction">
-            <h2 className="introduction__title">LET ME <span className="primaryColor">INTRODUCE </span>MYSELF</h2>
+            <Title text="LET ME %INTRODUCE% MYSELF" size={2.5}/>
             <p className="introduction__text">
                 I fell in love with programming and I have at least learnt something, I think… 🤷‍♂️<br />
                 <br />

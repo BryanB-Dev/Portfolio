@@ -1,0 +1,9 @@
+@import '../../styles/main.scss';
+
+.title {
+    color: $color-tertiary;
+
+    >.primaryColor {
+        color: $color-primary
+    }
+}

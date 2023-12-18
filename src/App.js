@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "./styles/style.scss";
 import Home from "./pages/Home";
-import E404 from "./pages/404";
 import Layout from './components/Layout';
 import Profile from './pages/profile';
 import Skills from './pages/skills';
@@ -16,7 +15,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="*" element={<E404 />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </Layout>
     </Router>
