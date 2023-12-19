@@ -11,13 +11,14 @@ export default function Github({ user }) {
 
   return (
     <div className="github">
-      <Title text="Contributions %Github%" size={2.3} />
+      <Title text="Contributions %GitHub%" size={2.3} />
       <GitHubCalendar
         username={user}
         blockSize={15}
         blockMargin={5}
         theme={minimalTheme}
         fontSize={16}
+        style={{display: "flex"}}
       />
     </div>
   );
