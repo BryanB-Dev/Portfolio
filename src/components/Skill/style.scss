@@ -3,9 +3,9 @@
 .skill {
     @include flex(column, center, center);
     color: $color-tertiary;
-    border: 1.7px solid rgba(200, 137, 230, .637);
+    border: 1.7px solid rgba(201, 137, 230, 0.342);
     line-height: 1.5;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, .137);
     font-size: 4.5em;
     margin: 15px;
@@ -14,4 +14,30 @@
     padding: 10px;
     text-align: center;
     transition: all .4s ease 0s;
+    width: calc(100% / 6);
+    height: 125px;
+    backdrop-filter: blur(10px);
+    background-color: #1b1a2ea9;
+    box-shadow: 0 10px 10px 0 rgba(9, 5, 29, .171);
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.shiny::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--y, 0) * 1px - 50px);
+    left: calc(var(--x, 0) * 1px - 50px);
+    width: 105px;
+    height: 105px;
+    background: radial-gradient(rgba(255, 255, 255, 0.185), #1b1a2ea9 75%);
+
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.shiny:hover::after {
+    opacity: 0.4;
 }

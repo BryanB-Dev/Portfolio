@@ -1,0 +1,12 @@
+@import '../../styles/main.scss';
+
+.skillContainer {
+    @include flex(column, center, stretch, 10px);
+    text-align: center;
+    width: 100%;
+    &__skills {
+        @include flex(row, center, center);
+        flex-wrap: wrap; 
+        flex-flow: row wrap;
+    }
+}
