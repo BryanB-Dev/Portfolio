@@ -23,7 +23,7 @@
     }
     
     &__description {
-        @include flex(column, flex-start, stretch, 50px);
+        @include flex(column, flex-start, stretch, 30px);
         p:nth-child(2){
             padding-left: 70px;
         }
