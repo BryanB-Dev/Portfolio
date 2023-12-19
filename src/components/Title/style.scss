@@ -2,8 +2,10 @@
 
 .title {
     color: $color-tertiary;
+    font-weight: 500;
 
     >.primaryColor {
-        color: $color-primary
+        color: $color-primary;
+        font-weight: bolder;
     }
 }
