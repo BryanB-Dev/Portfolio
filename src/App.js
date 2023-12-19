@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "./styles/style.scss";
 import Home from "./pages/Home";
 import Layout from './components/Layout';
-import Profile from './pages/profile';
-import Skills from './pages/skills';
-import Projects from './pages/projects';
+import Profile from './pages/Profile';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
 
 function App() {
   return (
