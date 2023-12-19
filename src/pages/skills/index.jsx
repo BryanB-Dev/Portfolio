@@ -4,6 +4,7 @@ import SkillContainer from "../../components/SkillContainer";
 import Github from "../../components/Github";
 import Text from "../../components/Text";
 import Title from "../../components/Title";
+import SkillsData from "../../data/skills.json";
 import './style.scss';
 
 export default function Skills() {
@@ -12,8 +13,8 @@ export default function Skills() {
         <>
             <div className="skillSection">
                 <div className="skillSection__text">
-                    <Title text="Mes %Compétences%" size={2.4} />
-                    <Text text="En constante évolution, je me forme régulièrement à de nouvelles %technologies% pour faire face aux changements du domaine. Par nature %curieux%, j'aime explorer de nouveaux langages et outils. Mon but est de progresser sans cesse afin d'offrir le meilleur de mes %compétences%." size={1.25} />
+                    <Title text={SkillsData.title} size={2.4} />
+                    <Text text={SkillsData.text} size={1.25} />
                 </div>
                 <div className="skillSection__skills">
                     <SkillContainer datas={{ title: "Systèmes %D'exploitation%", skills: [<DiWindows />, <DiDebian />, <DiUbuntu />, <SiKalilinux />] }} />
@@ -23,7 +24,7 @@ export default function Skills() {
                     <SkillContainer datas={{ title: "Langage %Front-end%", skills: [<DiHtml5 />, <DiCss3 />, <DiJavascript1 />] }} />
                     <SkillContainer datas={{ title: "Préprocesseurs et %Framework%", skills: [<DiSass />, <DiReact />] }} />
                 </div>
-                <Github user={"BryanB-Dev"} />
+                <Github user={SkillsData.github} />
             </div>
         </>
     );
