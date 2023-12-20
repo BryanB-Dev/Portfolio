@@ -18,6 +18,10 @@ export default function Navbar() {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <>
             <div className={isMobileMenuOpen ? 'navToggle opened' : 'navToggle'} onClick={toggleMobileMenu}>
@@ -26,25 +30,25 @@ export default function Navbar() {
                 <span></span>
             </div>
             <nav className={isMobileMenuOpen ? 'nav nav__mobile' : 'nav'}>
-                <NavLink className="nav__item" to="/">{
+                <NavLink className="nav__item" to="/" onClick={closeMobileMenu}>{
                     <div className="nav__link">
                         <AiOutlineHome />
                         Accueil
                     </div>}
                 </NavLink>
-                <NavLink className="nav__item" to="/profile">{
+                <NavLink className="nav__item" to="/profile" onClick={closeMobileMenu}>{
                     <div className="nav__link">
                         <AiOutlineUser />
                         Profil
                     </div>}
                 </NavLink>
-                <NavLink className="nav__item" to="/skills">{
+                <NavLink className="nav__item" to="/skills" onClick={closeMobileMenu}>{
                     <div className="nav__link">
                         <CgFileDocument />
                         Compétences
                     </div>}
                 </NavLink>
-                <NavLink className="nav__item" to="/projects">{
+                <NavLink className="nav__item" to="/projects" onClick={closeMobileMenu}>{
                     <div className="nav__link">
                         <AiOutlineFundProjectionScreen />
                         Projets
