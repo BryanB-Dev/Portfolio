@@ -9,5 +9,9 @@
         @include flex(row, center, center, 10px);
         flex-wrap: wrap; 
         flex-flow: row wrap;
+        @media screen and (max-width: $breakpoint-mobile) {
+            gap:30px;
+            
+        }
     }
 }

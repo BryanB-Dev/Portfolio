@@ -1,7 +1,7 @@
 @import '../../styles/main.scss';
 
 .project {
-    @include flex(column, space-between, center);
+    @include flex(column, space-between, center, 20px);
     color: $color-tertiary;
     border: 1.7px solid rgba(201, 137, 230, 0.342);
     line-height: 1.5;
@@ -18,6 +18,10 @@
     backdrop-filter: blur(10px);
     background-color: #1b1a2ea9;
     box-shadow: 0 10px 10px 0 rgba(9, 5, 29, .171);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        height: fit-content;
+    }
 
     &:hover {
         transform: scale(1.05);
