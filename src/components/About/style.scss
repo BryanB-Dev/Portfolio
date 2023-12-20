@@ -1,7 +1,7 @@
 @import '../../styles/main.scss';
 
 .aboutSection {
-    @include flex(row, space-between, flex-end, 80px);
+    @include flex(row, space-between, center, 80px);
     padding: 180px 0px 50px 0px;
 
     @media screen and (max-width: $breakpoint-mobile) {
