@@ -1,0 +1,7 @@
+@import '../../styles/main.scss';
+
+.github {
+    @include flex(column, center, center, 15px);
+    width: 100%;
+    color: $color-tertiary;
+}

@@ -1,0 +1,47 @@
+@import '../../styles/main.scss';
+
+.footer {
+    @include flex(row, center, center);
+    width: 100%;
+    bottom: 0;
+    padding: 25px 30px;
+    z-index: 1024;
+    background-color: #0a0416;
+    color: $color-tertiary;
+
+    &__content {
+        @include flex(row, space-between, center);
+        width: 100%;
+        max-width: 1320px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            @include flex(column, center, center, 15px);
+        }
+    }
+
+    &__item {
+        @include flex(row, center, center, 7px);
+        width: 100%;
+
+        &>a {
+            color: $color-primary;
+            text-decoration: none;
+        }
+
+        &--left {
+            @include flex(row, flex-start, center, 7px);
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                @include flex(row, center, center, 7px);
+            }
+        }
+
+        &--right {
+            @include flex(row, flex-end, center, 7px);
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                @include flex(row, center, center, 7px);
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "main": {
+        "text": "Bonjour!",
+        "title": "Je suis %Bryan%",
+        "type": [
+            "Développeur Web",
+            "Étudiant OpenClassrooms"
+        ]
+    },
+    "introduction": {
+        "title": "À propos de %moi%",
+        "text": "Passionné par le développement web et appliquant ma %curiosité% dans des domaines variés, j'aime mettre en pratique mes connaissances techniques au service de projets concrets/n/nJ'apprécie particulièrement créer des applications fullstack modernes en combinant mes compétences frontend et backend. Lors de mes temps libres, j'aime aussi explorer de %nouvelles technologies%/n/nMon objectif est toujours d'apporter des solutions répondant aux besoins des utilisateurs de manière %créative et engagée%"
+    }
+}

@@ -1,0 +1,74 @@
+@import '../../styles/main.scss';
+
+.project {
+    @include flex(column, space-between, center, 20px);
+    color: $color-tertiary;
+    border: 1.7px solid rgba(201, 137, 230, 0.342);
+    line-height: 1.5;
+    border-radius: 10px;
+    box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, .137);
+    margin: 15px;
+    opacity: .93;
+    overflow: hidden;
+    padding: 10px 20px 30px 20px;
+    text-align: center;
+    transition: all .4s ease 0s;
+    width: 400px;
+    height: 600px;
+    backdrop-filter: blur(10px);
+    background-color: #1b1a2ea9;
+    box-shadow: 0 10px 10px 0 rgba(9, 5, 29, .171);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        height: fit-content;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &__infos {
+        @include flex(column, flex-start, center, 5px);
+        height: 100%;
+        >p {
+            text-align: start
+        }
+    }
+
+    &__button {
+        @include flex(row, center, center, 20px);
+        &--link {
+            @include flex(row, center, center, 5px);
+            color: $color-tertiary;
+            height: auto;
+            text-decoration: none;
+            padding: 7px 17px;
+            text-decoration: none;
+            border-radius: .25rem;
+            border: 1px solid transparent;
+            border-color: #623686 !important;
+            background-color: #934cce5e !important;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.shiny::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--y, 0) * 1px - 50px);
+    left: calc(var(--x, 0) * 1px - 50px);
+    width: 105px;
+    height: 105px;
+    background: radial-gradient(rgba(255, 255, 255, 0.185), #1b1a2ea9 75%);
+
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.shiny:hover::after {
+    opacity: 0.4;
+}

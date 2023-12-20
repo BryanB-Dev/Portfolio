@@ -1,0 +1,10 @@
+@import '../../styles/main.scss';
+
+.introductionSection {
+    @include flex(row, space-between, center, 80px);
+    padding: 150px 0px;
+    @media screen and (max-width: $breakpoint-mobile){
+        @include flex(column, flex-start, center, 100px);
+        padding: 100px 0px;
+    }
+}

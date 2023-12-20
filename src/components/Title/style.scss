@@ -1,0 +1,11 @@
+@import '../../styles/main.scss';
+
+.title {
+    color: $color-tertiary;
+    font-weight: 500;
+
+    >.primaryColor {
+        color: $color-primary;
+        font-weight: bolder;
+    }
+}

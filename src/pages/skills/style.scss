@@ -1,0 +1,20 @@
+@import '../../styles/main.scss';
+
+.skillSection {
+    @include flex(column, center, center, 70px);
+    padding: 180px 0px 50px 0px;
+    &__text {
+        @include flex(column, center, stretch, 30px);
+        @media screen and (max-width: $breakpoint-mobile){
+            width: 100%;
+        }
+        width: 70%;
+        >h2 {
+            text-align: center;
+        }
+    }
+    &__skills {
+        @include flex(column, center, stretch, 20px);
+        width: 100%;
+    }
+}

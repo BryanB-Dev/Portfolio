@@ -1,0 +1,17 @@
+@import '../../styles/main.scss';
+
+.projectContainer {
+    padding: 180px 0px 50px 0px;
+    @include flex(column, center, stretch, 20px);
+    text-align: center;
+    width: 100%;
+    &__projects {
+        @include flex(row, center, center, 10px);
+        flex-wrap: wrap; 
+        flex-flow: row wrap;
+        @media screen and (max-width: $breakpoint-mobile) {
+            gap:30px;
+            
+        }
+    }
+}
