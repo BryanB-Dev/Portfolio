@@ -7,8 +7,8 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer__content">
                 <div className="footer__item footer__item--left">
-                    Designed by
-                    <NavLink to="https://github.com/soumyajit4419">
+                    Inspiré par
+                    <NavLink to="https://github.com/soumyajit4419/Portfolio/">
                         Soumyajit Behera
                     </NavLink>
                 </div>
