@@ -1,7 +1,67 @@
 @import '../../styles/main.scss';
 
+.navToggle {
+    display: none;
+    
+    @media screen and (max-width: $breakpoint-mobile) {
+        display: block;
+        height: 34px;
+    }
+
+    &.opened {
+        @media screen and (max-width: $breakpoint-mobile) {
+            :nth-child(1) {
+                position: absolute !important;
+                top: 10px !important;
+                -webkit-transform: rotate(135deg) !important;
+                transform: rotate(135deg) !important;
+            }
+            :nth-child(2) {
+                background-color: transparent;
+                visibility: hidden;
+            }
+            :nth-child(3) {
+                position: absolute !important;
+                top: 10px !important;
+                -webkit-transform: rotate(-135deg) !important;
+                transform: rotate(-135deg) !important;
+            }
+        }
+    }
+
+    >span {
+        background-color: #be50f4;
+        display: block;
+        height: 4px;
+        left: 0;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        opacity: 1;
+        width: 27px;
+        transition: transform .35s ease-in-out;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .nav {
     @include flex(row, flex-end, center, 50px);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        display: none;
+    }
+
+
+    &__mobile {
+        @media screen and (max-width: $breakpoint-mobile) {
+            @include flex(column, center, center, 30px);
+            flex-basis: 100%;
+        }
+    }
 
     &__item {
         height: auto;
@@ -40,6 +100,9 @@
             position: absolute;
             transition: all .3s ease-out 0s;
             width: 0;
+            @media screen and (max-width: $breakpoint-mobile) {
+                display: none;
+            }
         }
     }
 
@@ -49,6 +112,10 @@
         color: $color-tertiary;
         text-decoration: none;
         @include flex(row, center, center, 5px);
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            font-size: 1.4em !important;
+        }
 
         >svg {
             width: 1em;

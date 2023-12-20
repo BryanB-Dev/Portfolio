@@ -9,6 +9,10 @@
     padding: 18px 0px;
     z-index: 1024;
     transition: all .3s ease-out 0s;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        background-color: #181a27 !important;
+    }
     
     &--blur {
         backdrop-filter: blur(15px);
@@ -21,7 +25,12 @@
         width: 100%;
         max-width: 1320px;
         margin: 0 30px;
-
+        
+        @media screen and (max-width: $breakpoint-mobile) {
+            @include flex(row, space-between, center, 30px);
+            flex-wrap: wrap;
+        }
+        
         &__logo {
             @include flex(row, center, center);
         }

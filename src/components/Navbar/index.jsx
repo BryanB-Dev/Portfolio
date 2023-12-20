@@ -8,40 +8,55 @@ import {
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import "./style.scss";
+import { useState } from "react";
 
 export default function Navbar() {
+
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
-        <nav className="nav">
-            <NavLink className="nav__item" to="/">{
-                <div className="nav__link">
-                    <AiOutlineHome />
-                    Accueil
-                </div>}
-            </NavLink>
-            <NavLink className="nav__item" to="/profile">{
-                <div className="nav__link">
-                    <AiOutlineUser />
-                    Profil
-                </div>}
-            </NavLink>
-            <NavLink className="nav__item" to="/skills">{
-                <div className="nav__link">
-                    <CgFileDocument />
-                    Compétences
-                </div>}
-            </NavLink>
-            <NavLink className="nav__item" to="/projects">{
-                <div className="nav__link">
-                    <AiOutlineFundProjectionScreen />
-                    Projets
-                </div>}
-            </NavLink>
-            <NavLink className="nav__item nav__item--fork" to="https://github.com/BryanB-Dev/Portfolio">{
-                <div className="nav__link">
-                    <CgGitFork />
-                    <AiFillStar />
-                </div>}
-            </NavLink>
-        </nav>
+        <>
+            <div className={isMobileMenuOpen ? 'navToggle opened' : 'navToggle'} onClick={toggleMobileMenu}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav className={isMobileMenuOpen ? 'nav nav__mobile' : 'nav'}>
+                <NavLink className="nav__item" to="/">{
+                    <div className="nav__link">
+                        <AiOutlineHome />
+                        Accueil
+                    </div>}
+                </NavLink>
+                <NavLink className="nav__item" to="/profile">{
+                    <div className="nav__link">
+                        <AiOutlineUser />
+                        Profil
+                    </div>}
+                </NavLink>
+                <NavLink className="nav__item" to="/skills">{
+                    <div className="nav__link">
+                        <CgFileDocument />
+                        Compétences
+                    </div>}
+                </NavLink>
+                <NavLink className="nav__item" to="/projects">{
+                    <div className="nav__link">
+                        <AiOutlineFundProjectionScreen />
+                        Projets
+                    </div>}
+                </NavLink>
+                <NavLink className="nav__item nav__item--fork" to="https://github.com/BryanB-Dev/Portfolio">{
+                    <div className="nav__link">
+                        <CgGitFork />
+                        <AiFillStar />
+                    </div>}
+                </NavLink>
+            </nav>
+        </>
     )
 }
