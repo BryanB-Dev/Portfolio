@@ -13,7 +13,7 @@ export default function Footer() {
                     </NavLink>
                 </div>
                 <div className="footer__item">
-                    Copyright © 2023
+                    Copyright © 2024
                     <NavLink to="https://github.com/BryanB-Dev">
                         BryanB-Dev
                     </NavLink>
